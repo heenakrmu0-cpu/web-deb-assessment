@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: #1a56db;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            font-size: 0.95rem;
+        }
+
+        .navbar .logo {
+            font-weight: bold;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container Wrapper */
+        .main-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border: 1px solid #dee2e6;
+            padding: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.8rem;
+            color: #e65100; /* Orange accent style matching template */
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #dee2e6;
+            flex-shrink: 0;
+        }
+
+        /* Section Headings */
+        section {
+            margin-top: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        section h3 {
+            font-size: 1.2rem;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        /* About Section Text */
+        .about-text {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Skills Buttons Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill-box {
+            background-color: #1a56db;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Projects Section */
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 15px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .project-card h4 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #495057;
+            background: #fff;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 90px;
+        }
+
+        .submit-btn {
+            background-color: #1a56db;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e40af;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1a56db;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        /* Back to top link container at bottom */
+        .back-to-top-container {
+            text-align: right;
+            padding: 10px 5%;
+        }
+
+        .back-to-top {
+            color: #1a56db;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border: 1px solid #1a56db;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Box -->
+    <div class="main-container">
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Hi, I am</h1>
+                <h2>Heena Ranolia</h2>
+                <p>Building modern web applications with MERN stack & AI/ML tools.</p>
+            </div>
+            <!-- Make sure image file is named 'coding_girl.png' -->
+            <img src="https://imgs.search.brave.com/YQZijV4MIkbVCc956AALk5F426alebY23gW4hvXdXtU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vcG9ydHJhaXQt/YmVhdXRpZnVsLWdp/cmwtcG9saWNlLXVu/aWZvcm0tcHJvZmVz/c2lvbmFsLXBvc2lu/Z18xNzM4MTUtMTAz/NzEuanBnP3NlbXQ9/YWlzX2h5YnJpZCZ3/PTc0MCZxPTgw" alt="Profile Illustration" class="profile-img">
+        </div>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h3>About Me</h3>
+            <p class="about-text">
+                Hello! My name is Heena Ranolia, and I am currently exploring web development. This is my portfolio website where I showcase my projects and technical web pages. I am a student at K.R. Mangalam University, pursuing B.Tech in CSE with a specialization in AI/ML, and I am deeply interested in technology and coding. I am expanding my skills daily, and I look forward to improving my knowledge in the field of web development, 4th IR fundamentals, and intelligent systems that make a real impact.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h3>My Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-box">HTML<br><small style="font-size:0.75rem; font-weight:normal;">Beginner</small></div>
+                <div class="skill-box">CSS<br><small style="font-size:0.75rem; font-weight:normal;">Beginner</small></div>
+                <div class="skill-box">JavaScript<br><small style="font-size:0.75rem; font-weight:normal;">Learning</small></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h3>My Projects</h3>
+            <div class="project-card">
+                <h4>Project 1</h4>
+                <p>A simple HTML & CSS webpage.</p>
+            </div>
+            <div class="project-card">
+                <h4>Project 2</h4>
+                <p>A mobile-responsive web project.</p>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" style="border-bottom: none; padding-bottom: 0;">
+            <h3>Contact Me</h3>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name: Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email: Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message: Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Bar -->
+    <div class="footer">
+        &copy; 2026 Shivangi Singh. All rights reserved.
+    </div>
+
+    <!-- Back to top shortcut -->
+    <div class="back-to-top-container">
+        <a href="#" class="back-to-top">Back to Top</a>
+    </div>
+
+</body>
+</html>
